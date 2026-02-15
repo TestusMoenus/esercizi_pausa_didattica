@@ -23,14 +23,12 @@ inputTypes.forEach(elemento => {
 
             let userNameField = null;
             
-            // Cerchiamo il campo username nella tua lista 
+            // Cerchiamo il campo username nella lista 
             inputTypes.forEach(campo => {
                 if (campo.hasAttribute("data-user-name")) {
                     userNameField = campo;
                 }
             });
-
-            // Controlliamo se lo username non è vuoto
             if (userNameField && userNameField.value.trim() !== "") {
                 const nomeInMaiuscolo = userNameField.value.toUpperCase();
                 container.innerHTML = `<h1 class="text-center p-5">Benvenuto ${nomeInMaiuscolo}</h1>`;
